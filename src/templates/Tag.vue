@@ -7,10 +7,6 @@
     <div class="posts">
       <PostCard v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node"/>
     </div>
-    <!--  
-            coverImage (width: 860, blur: 10)
-
-    -->
   </Layout>
 </template>
 
@@ -27,6 +23,7 @@ query Tag ($id: String!) {
             date (format: "D. MMMM YYYY")
             timeToRead
             description
+            coverImage (width: 860, blur: 10)
             content
           }
         }
